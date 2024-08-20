@@ -32,7 +32,7 @@
   </template>
 
   <script>
-  import axios from 'axios';
+
 
   export default {
     data() {
@@ -50,7 +50,7 @@
     methods: {
       async createUser() {
         try {
-          const response = await axios.post('/users/store', this.user);
+          const response = await this.$http.post('/users/store', this.user);
           this.message = 'Usuário criado com sucesso!';
           this.clearForm();
         } catch (error) {

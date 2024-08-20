@@ -12,7 +12,8 @@ class HelloWorldController extends Controller
      */
     public function index()
     {
-        return view('hello_world.index');
+        $data = "data";
+        return view('hello_world.index', compact('data'));
     }
 
     /**
