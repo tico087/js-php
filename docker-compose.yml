@@ -36,7 +36,7 @@ services:
       DB_USERNAME: root
       DB_PASSWORD: 123
     working_dir: /var/www
-    entrypoint: ["sh", "-c", "composer install && php artisan key:generate && php artisan migrate:fresh && yarn install && yarn build && php artisan serve --host=0.0.0.0 --port=8000"]
+    entrypoint: ["sh", "-c", "composer install && php artisan key:generate && php artisan migrate:fresh --seed && yarn install && yarn build && php artisan serve --host=0.0.0.0 --port=8000"]
 
   nginx:
     image: nginx:latest

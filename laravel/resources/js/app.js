@@ -5,9 +5,12 @@ import axios from 'axios';
 window.axios = axios;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+import ListOkrs from './components/ListOkrs.vue';
+
 import { createApp } from 'vue/dist/vue.esm-bundler';
 const app = createApp({});
 
+app.component('list-okrs', ListOkrs);
 const componentFiles = import.meta.glob('./components/*.vue', { eager: true });
 
 for (const path in componentFiles) {

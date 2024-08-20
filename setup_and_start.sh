@@ -9,4 +9,6 @@ fi
 # chmod +x ./wait-for-it.sh
 
 docker compose down --remove-orphans
-docker compose up -d --build $services
+docker-compose build --no-cache
+docker-compose up -d $services
+
