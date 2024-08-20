@@ -7,5 +7,7 @@
         </div>
         <hello-world>
         </hello-world>
+
+        {{-- @dd($data); --}}
     </div>
 @endsection

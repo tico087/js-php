@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OkrController;
+use App\Http\Controllers\ApiController;
 
 
 /*
@@ -19,4 +19,4 @@ use App\Http\Controllers\OkrController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-// Route::get('/get-okr', [ApiController::class, 'index'])->name('api.okr.index');
+Route::get('/{verb}/{model}', [ApiController::class, 'endpoint'])->name('api.endpoint');
